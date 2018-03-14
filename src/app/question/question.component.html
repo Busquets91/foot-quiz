@@ -1,6 +1,7 @@
+<app-coutdown-timer *ngIf="this.isStateAnswering()" (onTimeDown)="handleTimeDown()" ></app-coutdown-timer>
 <p>
   {{this.question.question}}
 </p>
 <div *ngFor="let answer of this.answers()">
-  <app-answer [answer]="answer"></app-answer>
+  <app-answer [answer]="answer" (makeAnswer)="setAnswer($event)" ></app-answer>
 </div>

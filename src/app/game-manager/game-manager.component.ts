@@ -15,10 +15,21 @@ export class GameManagerComponent implements OnInit {
     // On recupe la liste de question ici
     this.game = {
       id: 1,
+      score: 0,
       questions: [
         {
           id: 1,
           question: "Question 1",
+          answers: [
+            { answer: "Reponse 1", isTrue: false },
+            { answer: "Reponse 2", isTrue: false },
+            { answer: "Reponse 3", isTrue: true },
+            { answer: "Reponse 4", isTrue: false }
+          ]
+        },
+        {
+          id: 1,
+          question: "Question 2",
           answers: [
             { answer: "Reponse 1", isTrue: false },
             { answer: "Reponse 2", isTrue: false },
