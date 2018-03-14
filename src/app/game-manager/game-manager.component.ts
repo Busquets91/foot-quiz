@@ -15,6 +15,7 @@ export class GameManagerComponent implements OnInit {
     // On recupe la liste de question ici
     this.game = {
       id: 1,
+      score: 0,
       questions: [
         {
           id: 1,
