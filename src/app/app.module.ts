@@ -11,6 +11,7 @@ import { AnswerComponent } from './answer/answer.component';
 import { QuestionComponent } from './question/question.component';
 import { GameComponent } from './game/game.component';
 import { GameManagerComponent } from './game-manager/game-manager.component';
+import { CoutdownTimerComponent } from './coutdown-timer/coutdown-timer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { GameManagerComponent } from './game-manager/game-manager.component';
     AnswerComponent,
     QuestionComponent,
     GameComponent,
-    GameManagerComponent
+    GameManagerComponent,
+    CoutdownTimerComponent
   ],
   imports: [
     BrowserModule,

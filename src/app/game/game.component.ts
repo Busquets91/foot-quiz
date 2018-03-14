@@ -33,8 +33,8 @@ export class GameComponent implements OnInit {
 
   next(score: number) {
     this.incrementScore(score)
-    this.indexQuestion++
-    console.log(this.score)
+    this.indexQuestion < this.game.questions.length && this.indexQuestion++
+    console.log("next question", this.score)
   }
 
   ngOnInit() {}

@@ -1,3 +1,4 @@
+<app-coutdown-timer *ngIf="this.isStateAnswering()" (onTimeDown)="handleTimeDown()" ></app-coutdown-timer>
 <p>
   {{this.question.question}}
 </p>
