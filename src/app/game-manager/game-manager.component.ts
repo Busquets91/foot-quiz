@@ -26,6 +26,16 @@ export class GameManagerComponent implements OnInit {
             { answer: "Reponse 3", isTrue: true },
             { answer: "Reponse 4", isTrue: false }
           ]
+        },
+        {
+          id: 1,
+          question: "Question 2",
+          answers: [
+            { answer: "Reponse 1", isTrue: false },
+            { answer: "Reponse 2", isTrue: false },
+            { answer: "Reponse 3", isTrue: true },
+            { answer: "Reponse 4", isTrue: false }
+          ]
         }
       ]
     }

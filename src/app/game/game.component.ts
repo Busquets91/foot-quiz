@@ -9,22 +9,31 @@ import { Question } from "../models/question"
 })
 export class GameComponent implements OnInit {
   @Input() game: Game
-  // @deprecated
   private score: number = 0
+  indexQuestion: number = 0
 
   constructor() {}
 
+  /** @deprecated */
   questions(): Question[] {
     return this.game && this.game.questions
   }
 
-  // @deprecated
+  currentQuestion(): Question {
+    return (
+      this.game &&
+      this.game.questions &&
+      this.game.questions[this.indexQuestion]
+    )
+  }
+
   incrementScore(added: number) {
     this.score += added
   }
 
   next(score: number) {
     this.incrementScore(score)
+    this.indexQuestion++
     console.log(this.score)
   }
 

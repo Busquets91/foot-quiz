@@ -1,3 +1,4 @@
-<div *ngFor="let question of this.questions()">
+<!--<div *ngFor="let question of this.questions()">
   <app-question [question]="question" (nextQuestion)="next($event)"></app-question>
-</div>
+</div>-->
+<app-question [question]="this.currentQuestion()" (nextQuestion)="next($event)"></app-question>
