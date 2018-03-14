@@ -9,6 +9,7 @@ import { Answer } from "../models/answer"
 })
 export class QuestionComponent implements OnInit {
   @Input() question: Question
+  answer: Answer = null
 
   @Output() nextQuestion: EventEmitter<number> = new EventEmitter()
   constructor() {}
@@ -18,8 +19,10 @@ export class QuestionComponent implements OnInit {
   }
 
   setAnswer(answer: Answer) {
-    console.log(answer)
-    this.nextQuestion.emit(answer.isTrue ? 1 : 0)
+    if (this.answer === null) this.answer = answer
+
+    console.log(this.answer)
+    // this.nextQuestion.emit(answer.isTrue ? 1 : 0)
   }
 
   ngOnInit() {}
