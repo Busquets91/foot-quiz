@@ -16,6 +16,10 @@ export class QuestionComponent implements OnInit {
     return this.question && this.question.answers
   }
 
+  setAnswer(answer: Answer) {
+    console.log(answer)
+  }
+
   ngOnInit() {
   }
 
