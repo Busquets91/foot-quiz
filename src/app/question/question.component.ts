@@ -9,25 +9,21 @@ import { Answer } from "../models/answer"
 })
 export class QuestionComponent implements OnInit {
   private _question: Question
-  // @Input() question: Question
+  answer: Answer = null
+  state: number = 0
+
   @Input()
   set question(question: Question) {
-    console.log("prev value: ", this._question)
-    console.log("got name: ", question)
     if (question && this._question !== question) {
       this.state = 0
       this._question = question
     }
   }
 
-  answer: Answer = null
-  state: number = 0
-
   @Output() nextQuestion: EventEmitter<number> = new EventEmitter()
   constructor() {}
 
   get question(): Question {
-    // transform value for display
     return this._question
   }
 
@@ -45,7 +41,6 @@ export class QuestionComponent implements OnInit {
   }
 
   isStateAnswering() {
-    console.log(this.state, this.state === 0)
     return this.state === 0
   }
 
@@ -53,8 +48,5 @@ export class QuestionComponent implements OnInit {
     return this.state === 1
   }
 
-  ngOnInit() {
-    console.log("onint")
-    this.state = 0
-  }
+  ngOnInit() {}
 }

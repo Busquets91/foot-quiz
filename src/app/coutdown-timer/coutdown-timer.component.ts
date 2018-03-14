@@ -6,8 +6,9 @@ import { Component, OnInit, Output, EventEmitter } from "@angular/core"
   styleUrls: ["./coutdown-timer.component.css"]
 })
 export class CoutdownTimerComponent implements OnInit {
+  static TIME = 3
   intervalId = 0
-  seconds = 3
+  seconds = CoutdownTimerComponent.TIME
 
   @Output() onTimeDown = new EventEmitter()
   constructor() {}
@@ -26,7 +27,6 @@ export class CoutdownTimerComponent implements OnInit {
   start() {
     this.countDown()
   }
-  // stop() {this.clearTimer()}
 
   private countDown() {
     this.clearTimer()
@@ -34,13 +34,10 @@ export class CoutdownTimerComponent implements OnInit {
       this.seconds -= 1
       if (this.seconds === 0) {
         this.onTimeDown.emit()
-        // console.log("coco")
-        // this.message = "Blast off!"
       } else {
         if (this.seconds < 0) {
-          this.seconds = 3
-        } // reset
-        // this.message = `T-${this.seconds} seconds and counting`
+          this.seconds = CoutdownTimerComponent.TIME
+        }
       }
     }, 1000)
   }
