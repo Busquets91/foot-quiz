@@ -1,0 +1,6 @@
+<p>
+  {{this.question.question}}
+</p>
+<div *ngFor="let answer of this.answers()">
+  <app-answer [answer]="answer"></app-answer>
+</div>
