@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 
 import { environment } from '../environments/environment';
 import { AnswerComponent } from './answer/answer.component';
+import { QuestionComponent } from './question/question.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AnswerComponent
+    AnswerComponent,
+    QuestionComponent
   ],
   imports: [
     BrowserModule,
