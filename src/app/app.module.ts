@@ -1,10 +1,13 @@
 import { BrowserModule } from "@angular/platform-browser"
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from "@angular/core"
 import {
   MatButtonModule,
   MatListModule,
   MatToolbarModule
 } from "@angular/material"
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { RouterModule, Routes } from "@angular/router"
 
 import { ServiceWorkerModule } from "@angular/service-worker"
@@ -43,7 +46,9 @@ const appRoutes: Routes = [
     BrowserModule,
     ServiceWorkerModule.register("/ngsw-worker.js", {
       enabled: environment.production
-    })
+    }),
+    BrowserAnimationsModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
