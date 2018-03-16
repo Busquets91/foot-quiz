@@ -6,7 +6,7 @@ import { Component, OnInit, Output, EventEmitter } from "@angular/core"
   styleUrls: ["./coutdown-timer.component.css"]
 })
 export class CoutdownTimerComponent implements OnInit {
-  static TIME = 10
+  static TIME = 3
   intervalId = 0
   seconds = CoutdownTimerComponent.TIME
 
