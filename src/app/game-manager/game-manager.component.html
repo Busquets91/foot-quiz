@@ -1,3 +1,2 @@
 <app-game *ngIf="!this.isGameOver()" [game]="game" (gameOver)="over($event)"></app-game>
 <app-end-game *ngIf="this.isGameOver()" [score]="score"></app-end-game>
-<mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
