@@ -1,7 +1,7 @@
 <app-coutdown-timer *ngIf="this.isStateAnswering()" (onTimeDown)="handleTimeDown()" ></app-coutdown-timer>
-<p>
-  {{this.question.question}}
-</p>
-<div *ngFor="let answer of this.answers()">
-  <app-answer [answer]="answer" (makeAnswer)="setAnswer($event)" ></app-answer>
-</div>
+<mat-card>
+  <mat-card-title>{{this.question.question}}</mat-card-title>
+  <div *ngFor="let answer of this.answers()">
+    <app-answer [answer]="answer" (makeAnswer)="setAnswer($event)" ></app-answer>
+  </div>
+</mat-card>

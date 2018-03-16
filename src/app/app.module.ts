@@ -7,6 +7,7 @@ import {
   MatListModule,
   MatToolbarModule
 } from "@angular/material"
+import { MatCardModule } from '@angular/material/card';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { RouterModule, Routes } from "@angular/router"
@@ -50,7 +51,8 @@ const appRoutes: Routes = [
     }),
     BrowserAnimationsModule,
     MatProgressBarModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
