@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-end-game',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./end-game.component.css']
 })
 export class EndGameComponent implements OnInit {
-
+  @Input() score: number
   constructor() { }
 
   ngOnInit() {

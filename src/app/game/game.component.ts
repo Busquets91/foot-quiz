@@ -28,11 +28,6 @@ export class GameComponent implements OnInit {
     )
   }
 
-  // @deprecated
-  public isGameOver(): boolean {
-    return this.indexQuestion === this.game.questions.length - 1
-  }
-
   incrementScore(added: number) {
     this.score += added
   }

@@ -9,15 +9,21 @@ import { Game } from "../models/game"
 export class GameManagerComponent implements OnInit {
   game: Game
   isOver: boolean = false
+  score: number = 0
 
   constructor() {}
 
   over(score: number) {
+    this.score = score
     this.isOver = true
   }
 
   isGameOver() {
     return this.isOver
+  }
+
+  getScore(): number {
+    return this.score
   }
 
   ngOnInit() {
