@@ -16,7 +16,8 @@ import { QuestionComponent } from "./question/question.component"
 import { GameComponent } from "./game/game.component"
 import { GameManagerComponent } from "./game-manager/game-manager.component"
 import { CoutdownTimerComponent } from "./coutdown-timer/coutdown-timer.component";
-import { HomeComponent } from './home/home.component'
+import { HomeComponent } from './home/home.component';
+import { EndGameComponent } from './end-game/end-game.component'
 
 const appRoutes: Routes = [
   { path: "game", component: GameManagerComponent },
@@ -31,7 +32,8 @@ const appRoutes: Routes = [
     GameComponent,
     GameManagerComponent,
     CoutdownTimerComponent,
-    HomeComponent
+    HomeComponent,
+    EndGameComponent
   ],
   imports: [
     RouterModule.forRoot(

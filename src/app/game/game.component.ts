@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from "@angular/core"
+import { Component, OnInit, Input, Output, EventEmitter  } from "@angular/core"
 import { Game } from "../models/game"
 import { Question } from "../models/question"
 
@@ -12,6 +12,7 @@ export class GameComponent implements OnInit {
   private score: number = 0
   indexQuestion: number = 0
 
+  @Output() gameOver: EventEmitter<number> = new EventEmitter()
   constructor() {}
 
   /** @deprecated */
@@ -27,13 +28,22 @@ export class GameComponent implements OnInit {
     )
   }
 
+  // @deprecated
+  public isGameOver(): boolean {
+    return this.indexQuestion === this.game.questions.length - 1
+  }
+
   incrementScore(added: number) {
     this.score += added
   }
 
   next(score: number) {
     this.incrementScore(score)
-    this.indexQuestion < this.game.questions.length && this.indexQuestion++
+    if (this.indexQuestion === this.game.questions.length - 1) {
+      this.gameOver.emit(this.score)
+    } else {
+      this.indexQuestion < this.game.questions.length && this.indexQuestion++
+    }
     console.log("Score :", this.score)
   }
 

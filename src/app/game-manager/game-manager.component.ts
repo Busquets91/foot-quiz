@@ -8,8 +8,17 @@ import { Game } from "../models/game"
 })
 export class GameManagerComponent implements OnInit {
   game: Game
+  isOver: boolean = false
 
   constructor() {}
+
+  over(score: number) {
+    this.isOver = true
+  }
+
+  isGameOver() {
+    return this.isOver
+  }
 
   ngOnInit() {
     // On recupe la liste de question ici

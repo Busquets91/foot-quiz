@@ -1,1 +1,2 @@
-<app-game [game]="game"></app-game>
+<app-game *ngIf="!this.isGameOver()" [game]="game" (gameOver)="over($event)"></app-game>
+<div *ngIf="this.isGameOver()">finit</div>
