@@ -3,12 +3,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from "@angular/core"
 import {
-  MatButtonModule,
   MatListModule,
   MatToolbarModule
 } from "@angular/material"
 import { MatCardModule } from '@angular/material/card';
-import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatButtonModule } from '@angular/material/button';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { RouterModule, Routes } from "@angular/router"
 
@@ -51,7 +50,7 @@ const appRoutes: Routes = [
     }),
     BrowserAnimationsModule,
     MatProgressBarModule,
-    MatButtonToggleModule,
+    MatButtonModule,
     MatCardModule
   ],
   providers: [],
