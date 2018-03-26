@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core"
 import { Question } from "../models/question"
 import { Answer } from "../models/answer"
+import { StateQuestion } from "../models/enums/state-question.enum"
 
 @Component({
   selector: "app-question",
@@ -10,12 +11,12 @@ import { Answer } from "../models/answer"
 export class QuestionComponent implements OnInit {
   private _question: Question
   answer: Answer = null
-  state: number = 0
+  state: StateQuestion
 
   @Input()
   set question(question: Question) {
     if (question && this._question !== question) {
-      this.state = 0
+      this.state = StateQuestion.answering
       this._question = question
       this.answer = null
     }
@@ -37,8 +38,9 @@ export class QuestionComponent implements OnInit {
   }
 
   handleTimeDown() {
-    this.nextQuestion.emit(this.answer && this.answer.isTrue ? 1 : 0)
-    this.state = 1
+	this.state = StateQuestion.showing
+	console.log("Show answer", this.state)
+    //this.nextQuestion.emit(this.answer && this.answer.isTrue ? 1 : 0)
   }
 
   isStateAnswering() {
