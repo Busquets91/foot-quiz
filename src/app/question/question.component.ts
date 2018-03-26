@@ -17,6 +17,7 @@ export class QuestionComponent implements OnInit {
     if (question && this._question !== question) {
       this.state = 0
       this._question = question
+      this.answer = null
     }
   }
 

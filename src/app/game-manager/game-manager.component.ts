@@ -43,13 +43,23 @@ export class GameManagerComponent implements OnInit {
           ]
         },
         {
-          id: 1,
-          question: "Question 2",
+          id: 2,
+          question: "En quelle années Jacques Chirac dissout-il l'assemblée nationale?",
           answers: [
-            { answer: "Reponse 1", isTrue: false },
-            { answer: "Reponse 2", isTrue: false },
-            { answer: "Reponse 3", isTrue: true },
-            { answer: "Reponse 4", isTrue: false }
+            { answer: "1997", isTrue: true },
+            { answer: "1999", isTrue: false },
+            { answer: "1994", isTrue: false },
+            { answer: "1996", isTrue: false }
+          ]
+        },
+        {
+          id: 3,
+          question: "Comment s'appelait le personnage qui jouait du Synthé dans la série Hélène et les garçons?",
+          answers: [
+            { answer: "Mat", isTrue: false },
+            { answer: "José", isTrue: true },
+            { answer: "Alex", isTrue: false },
+            { answer: "Nicolas", isTrue: false }
           ]
         }
       ]
