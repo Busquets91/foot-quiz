@@ -9,6 +9,7 @@ import { Answer } from "../models/answer"
 export class AnswerComponent implements OnInit {
   @Input() answer: Answer
   @Input() show: boolean = false
+  private _selected: boolean = false
 
   @Output() makeAnswer: EventEmitter<Answer> = new EventEmitter()
 
@@ -17,11 +18,26 @@ export class AnswerComponent implements OnInit {
   ngOnInit() {
   }
 
+  get selected(): boolean {
+    return this._selected
+  }
+
+  set selected(bool: boolean) {
+    this._selected = bool
+  }
+
+  get good(): boolean {
+    return this.answer.isTrue
+  }
+
   getShow() {
     return this.show
   }
 
   handleAnswer() {
+    this.selected = true
+    console.log("toto", this.selected, this.good)
+    
     this.makeAnswer.emit(this.answer)
   }
 

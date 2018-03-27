@@ -1,2 +1,5 @@
 <button mat-button *ngIf="!getShow()" (click)="handleAnswer()">{{this.answer.answer}}</button>
-<button mat-button *ngIf="getShow()">ttoo</button>
+<button mat-button *ngIf="getShow() && selected && good">Selected & good</button>
+<button mat-button *ngIf="getShow() && selected && !good"> Selected & not good</button>
+<button mat-button *ngIf="getShow() && !selected && good"> Not Selected & good</button>
+<button mat-button *ngIf="getShow() && !selected && !good"> Not Selected & not good</button>
