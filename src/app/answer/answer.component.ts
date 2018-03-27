@@ -8,12 +8,17 @@ import { Answer } from "../models/answer"
 })
 export class AnswerComponent implements OnInit {
   @Input() answer: Answer
+  @Input() show: boolean = false
 
   @Output() makeAnswer: EventEmitter<Answer> = new EventEmitter()
 
   constructor() {}
 
   ngOnInit() {
+  }
+
+  getShow() {
+    return this.show
   }
 
   handleAnswer() {

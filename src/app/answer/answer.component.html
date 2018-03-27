@@ -1,1 +1,2 @@
-<button mat-button (click)="handleAnswer()">{{this.answer.answer}}</button>
+<button mat-button *ngIf="!getShow()" (click)="handleAnswer()">{{this.answer.answer}}</button>
+<button mat-button *ngIf="getShow()">ttoo</button>
