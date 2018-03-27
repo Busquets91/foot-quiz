@@ -1,5 +1,5 @@
 <button mat-raised-button *ngIf="!show" (click)="handleAnswer()">{{this.answer.answer}}</button>
-<button mat-raised-button *ngIf="show && selected && good" color="primary">{{this.answer.answer}}</button>
-<button mat-raised-button *ngIf="show && selected && !good" color="warn">{{this.answer.answer}}</button>
-<button mat-raised-button *ngIf="show && !selected && good" color="accent">{{this.answer.answer}}</button>
-<button mat-raised-button *ngIf="show && !selected && !good">{{this.answer.answer}}</button>
+<button mat-raised-button *ngIf="show && selected && good" color="primary" class="answered">{{this.answer.answer}}</button>
+<button mat-raised-button *ngIf="show && selected && !good" color="warn" class="answered">{{this.answer.answer}}</button>
+<button mat-raised-button *ngIf="show && !selected && good" color="accent" class="answered">{{this.answer.answer}}</button>
+<button mat-raised-button *ngIf="show && !selected && !good" class="answered">{{this.answer.answer}}</button>
