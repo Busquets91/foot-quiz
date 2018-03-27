@@ -11,7 +11,6 @@ export class AnswerComponent implements OnInit {
   private _show: boolean = false
 
   @Input() answer: Answer
-  //@Input() show: boolean = false
   @Input()
   set show(bool: boolean) {
     this._show = bool
@@ -39,10 +38,6 @@ export class AnswerComponent implements OnInit {
   get good(): boolean {
     return this.answer.isTrue
   }
-
-  // getShow() {
-  //   return this.show
-  // }
 
   handleAnswer() {
     this.selected = true
