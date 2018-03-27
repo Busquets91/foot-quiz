@@ -41,8 +41,6 @@ export class AnswerComponent implements OnInit {
 
   handleAnswer() {
     this.selected = true
-    console.log("toto", this.selected, this.good)
-    
     this.makeAnswer.emit(this.answer)
   }
 

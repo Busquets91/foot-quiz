@@ -38,9 +38,11 @@ export class QuestionComponent implements OnInit {
   }
 
   handleTimeDown() {
-	this.state = StateQuestion.showing
-	console.log("Show answer", this.state)
-    //this.nextQuestion.emit(this.answer && this.answer.isTrue ? 1 : 0)
+    this.state = StateQuestion.showing
+  }
+
+  handleNextQuestion() {
+    this.nextQuestion.emit(this.answer && this.answer.isTrue ? 1 : 0)
   }
 
   isStateAnswering() {
