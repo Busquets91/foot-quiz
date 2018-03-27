@@ -7,9 +7,15 @@ import { Answer } from "../models/answer"
   styleUrls: ['./answer.component.css']
 })
 export class AnswerComponent implements OnInit {
-  @Input() answer: Answer
-  @Input() show: boolean = false
   private _selected: boolean = false
+  private _show: boolean = false
+
+  @Input() answer: Answer
+  //@Input() show: boolean = false
+  @Input()
+  set show(bool: boolean) {
+    this._show = bool
+  }
 
   @Output() makeAnswer: EventEmitter<Answer> = new EventEmitter()
 
@@ -26,13 +32,17 @@ export class AnswerComponent implements OnInit {
     this._selected = bool
   }
 
+  get show(): boolean {
+    return this._show
+  }
+
   get good(): boolean {
     return this.answer.isTrue
   }
 
-  getShow() {
-    return this.show
-  }
+  // getShow() {
+  //   return this.show
+  // }
 
   handleAnswer() {
     this.selected = true

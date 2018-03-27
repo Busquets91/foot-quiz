@@ -44,11 +44,11 @@ export class QuestionComponent implements OnInit {
   }
 
   isStateAnswering() {
-    return this.state === 0
+    return this.state === StateQuestion.answering
   }
 
   isStateShowAnswer() {
-    return this.state === 1
+    return this.state === StateQuestion.showing
   }
 
   ngOnInit() {}
