@@ -1,3 +1,23 @@
 .answered {
 	cursor: default;
 }
+
+.selected {
+	background: #9E9E9E;
+}
+
+.selected-good {
+	background: #8BC34A;
+}
+
+.selected-wrong {
+	background: #F44336;
+}
+
+.not-selected-good {
+	background: #C6FF00;
+}
+
+.other {
+	background: #E0E0E0;
+}
