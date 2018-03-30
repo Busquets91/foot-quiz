@@ -34,12 +34,12 @@ export class GameManagerComponent implements OnInit {
       questions: [
         {
           id: 1,
-          question: "Question 1",
+          question: "A quel animal l’adjectif «hippique » se rapporte-t-il ?",
           answers: [
-            { answer: "Reponse 1", isTrue: false },
-            { answer: "Reponse 2", isTrue: false },
-            { answer: "Reponse 3", isTrue: true },
-            { answer: "Reponse 4", isTrue: false }
+            { answer: "Au canard", isTrue: false },
+            { answer: "Au cheval", isTrue: true },
+            { answer: "Au chien", isTrue: false },
+            { answer: "Au hibou", isTrue: false }
           ]
         },
         {
