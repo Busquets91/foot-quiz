@@ -44,7 +44,7 @@ export class GameManagerComponent implements OnInit {
         },
         {
           id: 2,
-          question: "En quelle années Jacques Chirac dissout-il l'assemblée nationale?",
+          question: "En quelle année Jacques Chirac dissout-il l'assemblée nationale?",
           answers: [
             { answer: "1997", isTrue: true },
             { answer: "1999", isTrue: false },
