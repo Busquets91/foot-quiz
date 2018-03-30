@@ -1,8 +1,10 @@
 <app-coutdown-timer *ngIf="this.isStateAnswering()" (onTimeDown)="handleTimeDown()" ></app-coutdown-timer>
-<mat-card>
-  <mat-card-title *ngIf="this.isStateAnswering()">{{this.question.question}}</mat-card-title>
-  <mat-card-title *ngIf="this.isStateShowAnswer()" (click)="handleNextQuestion()" class="question-show">{{this.question.question}}</mat-card-title>
-  <div *ngFor="let answer of this.answers()">
-    <app-answer [answer]="answer" [questionAnswered]="hasAnswered()" [show]="isStateShowAnswer()" (makeAnswer)="setAnswer($event)" ></app-answer>
+<div class="question-container">
+  <h2 *ngIf="this.isStateAnswering()">{{this.question.question}}</h2>
+  <h2 *ngIf="this.isStateShowAnswer()" (click)="handleNextQuestion()" class="question-show">{{this.question.question}}</h2>
+  <div class="answers-container">
+	  <div *ngFor="let answer of this.answers()">
+	    <app-answer [answer]="answer" [questionAnswered]="hasAnswered()" [show]="isStateShowAnswer()" (makeAnswer)="setAnswer($event)" ></app-answer>
+	  </div>
   </div>
-</mat-card>
+</div>
