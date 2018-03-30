@@ -53,5 +53,9 @@ export class QuestionComponent implements OnInit {
     return this.state === StateQuestion.showing
   }
 
+  hasAnswered() {
+    return this.answer !== null
+  }
+
   ngOnInit() {}
 }

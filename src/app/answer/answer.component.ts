@@ -9,11 +9,17 @@ import { Answer } from "../models/answer"
 export class AnswerComponent implements OnInit {
   private _selected: boolean = false
   private _show: boolean = false
+  private _isQuestionAnswered: boolean = false
 
   @Input() answer: Answer
   @Input()
   set show(bool: boolean) {
     this._show = bool
+  }
+
+  @Input()
+  set questionAnswered(bool: boolean) {
+    this._isQuestionAnswered = bool
   }
 
   @Output() makeAnswer: EventEmitter<Answer> = new EventEmitter()
@@ -25,6 +31,10 @@ export class AnswerComponent implements OnInit {
 
   get selected(): boolean {
     return this._selected
+  }
+
+  get questionAnswered(): boolean {
+    return this._isQuestionAnswered
   }
 
   set selected(bool: boolean) {
@@ -40,8 +50,10 @@ export class AnswerComponent implements OnInit {
   }
 
   handleAnswer() {
-    this.selected = true
-    this.makeAnswer.emit(this.answer)
+    if (!this.questionAnswered) {
+      this.selected = true
+      this.makeAnswer.emit(this.answer)
+    }
   }
 
 }
