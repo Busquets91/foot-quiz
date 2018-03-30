@@ -3,6 +3,6 @@
   <mat-card-title *ngIf="this.isStateAnswering()">{{this.question.question}}</mat-card-title>
   <mat-card-title *ngIf="this.isStateShowAnswer()" (click)="handleNextQuestion()" class="question-show">{{this.question.question}}</mat-card-title>
   <div *ngFor="let answer of this.answers()">
-    <app-answer [answer]="answer" [show]="isStateShowAnswer()" (makeAnswer)="setAnswer($event)" ></app-answer>
+    <app-answer [answer]="answer" [questionAnswered]="hasAnswered()" [show]="isStateShowAnswer()" (makeAnswer)="setAnswer($event)" ></app-answer>
   </div>
 </mat-card>
