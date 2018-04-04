@@ -31,9 +31,9 @@
   version "4.0.0-beta.8"
   resolved "https://registry.yarnpkg.com/@angular/animation/-/animation-4.0.0-beta.8.tgz#9f61b4ee84ff4e8f48abb0eb49fff02bdedccc2e"
 
-"@angular/animations@^5.2.0":
-  version "5.2.8"
-  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-5.2.8.tgz#31cdb49163881323fa5ded41e89683ec5e9ac8b5"
+"@angular/animations@^5.2.9":
+  version "5.2.9"
+  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-5.2.9.tgz#220db9fb5a52a193db0023d721b23ddd25a75770"
   dependencies:
     tslib "^1.7.1"
 
@@ -175,9 +175,9 @@
   dependencies:
     tslib "^1.7.1"
 
-"@angular/service-worker@^5.2.0":
-  version "5.2.8"
-  resolved "https://registry.yarnpkg.com/@angular/service-worker/-/service-worker-5.2.8.tgz#4bd57edc560b7a1b7a33c391a5f3771e18c851a7"
+"@angular/service-worker@^5.2.8":
+  version "5.2.9"
+  resolved "https://registry.yarnpkg.com/@angular/service-worker/-/service-worker-5.2.9.tgz#47ee439f2f896ac701fee271d046589a6c46b6af"
   dependencies:
     tslib "^1.7.1"
 
