@@ -1,0 +1,12 @@
+.home-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+.footer > p {
+	text-align: center;
+	color: #9E9E9E;
+}

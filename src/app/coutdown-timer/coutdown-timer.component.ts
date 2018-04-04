@@ -17,6 +17,10 @@ export class CoutdownTimerComponent implements OnInit {
     clearInterval(this.intervalId)
   }
 
+  getSeconds(): number {
+    return this.seconds
+  }
+
   ngOnInit() {
     this.start()
   }
