@@ -8,11 +8,8 @@ import { GameConfig } from "../models/game-config"
 })
 export class EndGameComponent implements OnInit {
   @Input() score: number
+  @Input() nbQuestions: number
   constructor() {}
 
   ngOnInit() {}
-
-  get nbQuestions(): number {
-    return GameConfig.NB_QUESTIONS
-  }
 }
