@@ -5,7 +5,7 @@
     <mat-icon *ngIf="isStateShowAnswer" (click)="handleNextQuestion()" svgIcon="next"></mat-icon>
   </div>
   <div class="answers-container">
-	  <div *ngFor="let answer of answers">
+	  <div *ngFor="let answer of answers | sortRandom">
 	    <app-answer [answer]="answer" [questionAnswered]="hasAnswered" [show]="isStateShowAnswer" (makeAnswer)="setAnswer($event)" ></app-answer>
 	  </div>
   </div>
