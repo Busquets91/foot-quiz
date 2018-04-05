@@ -29,6 +29,7 @@ export class GameComponent implements OnInit {
 
   next(score: number) {
     this.incrementScore(score)
+    console.log(this.game.questions)
     const isOver = this.indexQuestion === this.game.questions.length - 1
     if (isOver) {
       this.gameOver.emit(this.score)
