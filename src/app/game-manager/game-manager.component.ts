@@ -23,6 +23,10 @@ export class GameManagerComponent implements OnInit {
     return this.isOver
   }
 
+  get nbQuestions(): number {
+    return this.game.questions.length
+  }
+
   ngOnInit() {
     this.game = this.gameService.getGame()
   }

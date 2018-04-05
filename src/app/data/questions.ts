@@ -30,6 +30,17 @@ const questions = [
       { answer: "Alex", isTrue: false },
       { answer: "Nicolas", isTrue: false }
     ]
+  },
+  {
+    id: 4,
+    question:
+      "Qui a gagné la coupe du monde 2006 ?",
+    answers: [
+      { answer: "Allemagne", isTrue: false },
+      { answer: "France", isTrue: false },
+      { answer: "Brésil", isTrue: false },
+      { answer: "Italie", isTrue: true }
+    ]
   }
 ]
 
