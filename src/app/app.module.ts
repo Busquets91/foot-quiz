@@ -1,10 +1,12 @@
 import { BrowserModule } from "@angular/platform-browser"
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from "@angular/core"
+import { HttpClientModule } from "@angular/common/http"
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatIconModule } from '@angular/material/icon';
 import { RouterModule, Routes } from "@angular/router"
 
 import { ServiceWorkerModule } from "@angular/service-worker"
@@ -49,7 +51,9 @@ const appRoutes: Routes = [
     MatProgressBarModule,
     MatButtonModule,
     MatCardModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatIconModule,
+    HttpClientModule
   ],
   providers: [GameService],
   bootstrap: [AppComponent]
