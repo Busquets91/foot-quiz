@@ -1,2 +1,2 @@
-<app-game *ngIf="!this.isGameOver()" [game]="game" (gameOver)="over($event)"></app-game>
-<app-end-game *ngIf="this.isGameOver()" [score]="score"></app-end-game>
+<app-game *ngIf="!isGameOver" [game]="game" (gameOver)="over($event)"></app-game>
+<app-end-game *ngIf="isGameOver" [score]="score"></app-end-game>
