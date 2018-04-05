@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from "@angular/core"
-import { GameConfig } from "../models/game-config"
+import {DomSanitizer} from '@angular/platform-browser';
+import {MatIconRegistry} from '@angular/material';
 
 @Component({
   selector: "app-end-game",
@@ -9,7 +10,14 @@ import { GameConfig } from "../models/game-config"
 export class EndGameComponent implements OnInit {
   @Input() score: number
   @Input() nbQuestions: number
-  constructor() {}
+  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+    iconRegistry.addSvgIcon(
+      'replay',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/icons/replay.svg'));
+    iconRegistry.addSvgIcon(
+      'menu',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/icons/menu.svg'));
+  }
 
   ngOnInit() {}
 }
