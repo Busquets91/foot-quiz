@@ -17,7 +17,8 @@ export class QuestionComponent implements OnInit {
 
   @Input()
   set question(question: Question) {
-    if (question && this._question !== question) {
+    const isQuestionDifferent = question && this._question !== question
+    if (isQuestionDifferent) {
       this.state = StateQuestion.answering
       this._question = question
       this.answer = null
