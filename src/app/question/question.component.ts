@@ -34,7 +34,11 @@ export class QuestionComponent implements OnInit {
   }
 
   setAnswer(answer: Answer) {
-    if (this.answer === null) this.answer = answer
+    if (this.answer === null) {
+      this.answer = answer
+      // When you answer timer stops
+      this.state = StateQuestion.showing
+    }
   }
 
   handleTimeDown() {
