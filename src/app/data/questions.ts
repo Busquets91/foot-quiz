@@ -99,7 +99,7 @@ const questions = [
     ]
   },
   {
-    question: "Quel numéro portai Zinedine Zidane dans l'équipe de France ?",
+    question: "Quel numéro portait Zinedine Zidane dans l'équipe de France ?",
     answers: [
       { answer: "Le 10", isTrue: true },
       { answer: "Le 14", isTrue: false },
@@ -252,7 +252,7 @@ const questions = [
     ]
   },
   {
-    question: "Quel etait l'équipementier de l'Olympique Lyonnais en 2006 ?",
+    question: "Quel était l'équipementier de l'Olympique Lyonnais en 2006 ?",
     answers: [
       { answer: "Umbro", isTrue: true },
       { answer: "Adidas", isTrue: false },

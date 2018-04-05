@@ -1,0 +1,22 @@
+[debug] [2018-04-05T15:23:28.754Z] ----------------------------------------------------------------------
+[debug] [2018-04-05T15:23:28.759Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2018-04-05T15:23:28.759Z] CLI Version:   3.18.0
+[debug] [2018-04-05T15:23:28.759Z] Platform:      linux
+[debug] [2018-04-05T15:23:28.759Z] Node Version:  v8.6.0
+[debug] [2018-04-05T15:23:28.759Z] Time:          Thu Apr 05 2018 17:23:28 GMT+0200 (CEST)
+[debug] [2018-04-05T15:23:28.759Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-04-05T15:23:28.778Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-04-05T15:23:28.778Z] > authorizing via signed-in user
+[debug] [2018-04-05T15:23:28.782Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-04-05T15:23:28.782Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/UfhYC1cS-hWM_k_0Xlb-SbnTL0cYjnluoQwP_caRAQRWZuLuSCXwBDUYDiCE9lV7',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Thu Apr 05 2018 17:23:28 GMT+0200 (CEST)
+[debug] [2018-04-05T15:23:29.888Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-05T15:23:29.930Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/foot-quiz-pps  
+  
+ Thu Apr 05 2018 17:23:29 GMT+0200 (CEST)
