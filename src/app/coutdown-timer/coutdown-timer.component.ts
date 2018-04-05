@@ -34,7 +34,7 @@ export class CoutdownTimerComponent implements OnInit {
   }
 
   get value(): number {
-    return this.getSeconds() / 10 * 100
+    return this.getSeconds() / GameConfig.DURATION_QUESTION * 100
   }
 
   private countDown() {

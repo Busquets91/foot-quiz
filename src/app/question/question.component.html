@@ -2,7 +2,7 @@
 <div class="question-container">
   <div class="question">
     <h3>{{this.question.question}}</h3>
-    <button mat-raised-button *ngIf="isStateShowAnswer" (click)="handleNextQuestion()">Next</button>
+    <mat-icon *ngIf="isStateShowAnswer" (click)="handleNextQuestion()" svgIcon="next"></mat-icon>
   </div>
   <div class="answers-container">
 	  <div *ngFor="let answer of answers">

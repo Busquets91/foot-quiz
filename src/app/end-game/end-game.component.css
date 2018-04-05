@@ -5,3 +5,8 @@
 	justify-content: center;
 	min-height: 100vh;
 }
+
+.mat-raised-button{
+  margin-bottom: 15px;
+  margin-top: 5px;
+}

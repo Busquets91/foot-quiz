@@ -5,7 +5,8 @@
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
-  background-color: #ffff81;
+  background-image: url('assets/img/background.png');
+  color: #37474f;
 }
 
 html, body

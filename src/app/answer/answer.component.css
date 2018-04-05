@@ -7,15 +7,15 @@
 }
 
 .selected-good {
-	background: #009624 !important;
+	background: #00c853 !important;
 }
 
 .selected-wrong {
-	background: #c41c00 !important;
+	background: #f4511e !important;
 }
 
 .not-selected-good {
-	background: #00c853 !important;
+	background: #81c784 !important;
 }
 
 .other {
