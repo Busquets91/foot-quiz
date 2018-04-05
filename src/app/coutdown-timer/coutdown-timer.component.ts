@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from "@angular/core"
+import { GameConfig } from "../models/game-config"
 
 @Component({
   selector: "app-coutdown-timer",
@@ -6,7 +7,7 @@ import { Component, OnInit, Output, EventEmitter } from "@angular/core"
   styleUrls: ["./coutdown-timer.component.css"]
 })
 export class CoutdownTimerComponent implements OnInit {
-  static TIME = 10
+  static TIME = GameConfig.DURATION_QUESTION
   intervalId = 0
   seconds = CoutdownTimerComponent.TIME
 
@@ -35,7 +36,7 @@ export class CoutdownTimerComponent implements OnInit {
   private countDown() {
     this.clearTimer()
     this.intervalId = window.setInterval(() => {
-      //this.seconds -= 1
+      this.seconds -= 1
       if (this.seconds === 0) {
         this.onTimeDown.emit()
       } else {
