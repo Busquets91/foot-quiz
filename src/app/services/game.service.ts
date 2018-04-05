@@ -9,15 +9,15 @@ import questions from "../data/questions"
 export class GameService {
   constructor() {}
 
-  protected getQuestions(nb: number): Question[] {
-    return UtilService.pickRandomArray(questions, 2)
+  protected getQuestions(): Question[] {
+    return UtilService.pickRandomArray(questions, GameConfig.NB_QUESTIONS)
   }
 
   public getGame(): Game {
     const game = {
       id: 1,
       score: 0,
-      questions: this.getQuestions(GameConfig.NB_QUESTIONS)
+      questions: this.getQuestions()
     }
     return game
   }
