@@ -20,4 +20,8 @@ export class EndGameComponent implements OnInit {
   }
 
   ngOnInit() {}
+
+  getValue(){
+    return 100*this.score/this.nbQuestions;
+  }
 }

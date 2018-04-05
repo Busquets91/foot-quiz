@@ -6,7 +6,29 @@
 	min-height: 100vh;
 }
 
+.mat-progress-spinner{
+  position: fixed;
+  bottom: 50%;
+}
+
+.score{
+  font-size: 5em;
+  position: fixed;
+  bottom: 50%;
+  margin-bottom: 70px;
+  font-weight: bold;
+}
+
+.recap{
+  position: fixed;
+  top: 50%;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  line-height: 1.4em;
+  font-size: 1.5em;
+}
+
 .mat-raised-button{
-  margin-bottom: 15px;
-  margin-top: 5px;
+  margin: 50px 20px;
 }
