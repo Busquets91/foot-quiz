@@ -49,6 +49,30 @@ export class AnswerComponent implements OnInit {
     return this.answer.isTrue
   }
 
+  get notSelectedNotShow(): boolean {
+    return !this.show && !this.selected
+  }
+
+  get selectedNotShow(): boolean {
+    return !this.show && this.selected
+  }
+
+  get selectedGood(): boolean {
+    return this.show && this.selected && this.good
+  }
+
+  get selectedWrong(): boolean {
+    return this.show && this.selected && !this.good
+  }
+
+  get notSelectedGood(): boolean {
+    return this.show && !this.selected && this.good
+  }
+
+  get other(): boolean {
+    return this.show && !this.selected && !this.good
+  }
+
   handleAnswer() {
     if (!this.questionAnswered) {
       this.selected = true
