@@ -1,14 +1,10 @@
 import { BrowserModule } from "@angular/platform-browser"
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from "@angular/core"
-import {
-  MatListModule,
-  MatToolbarModule
-} from "@angular/material"
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { RouterModule, Routes } from "@angular/router"
 
 import { ServiceWorkerModule } from "@angular/service-worker"
@@ -52,7 +48,8 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     MatProgressBarModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatProgressSpinnerModule
   ],
   providers: [GameService],
   bootstrap: [AppComponent]
