@@ -1,12 +1,12 @@
-<app-coutdown-timer *ngIf="this.isStateAnswering()" (onTimeDown)="handleTimeDown()" ></app-coutdown-timer>
+<app-coutdown-timer *ngIf="isStateAnswering" (onTimeDown)="handleTimeDown()" ></app-coutdown-timer>
 <div class="question-container">
   <div class="question">
-    <h3 *ngIf="this.isStateAnswering()">{{this.question.question}}</h3>
-    <h3 *ngIf="this.isStateShowAnswer()" (click)="handleNextQuestion()" class="question-show">{{this.question.question}}</h3>
+    <h3 *ngIf="isStateAnswering">{{this.question.question}}</h3>
+    <h3 *ngIf="isStateShowAnswer" (click)="handleNextQuestion()" class="question-show">{{this.question.question}}</h3>
   </div>
   <div class="answers-container">
-	  <div *ngFor="let answer of this.answers()">
-	    <app-answer [answer]="answer" [questionAnswered]="hasAnswered()" [show]="isStateShowAnswer()" (makeAnswer)="setAnswer($event)" ></app-answer>
+	  <div *ngFor="let answer of answers">
+	    <app-answer [answer]="answer" [questionAnswered]="hasAnswered" [show]="isStateShowAnswer" (makeAnswer)="setAnswer($event)" ></app-answer>
 	  </div>
   </div>
 </div>
