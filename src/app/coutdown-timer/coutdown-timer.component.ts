@@ -33,6 +33,10 @@ export class CoutdownTimerComponent implements OnInit {
     this.countDown()
   }
 
+  get value(): number {
+    return this.getSeconds() / 10 * 100
+  }
+
   private countDown() {
     this.clearTimer()
     this.intervalId = window.setInterval(() => {

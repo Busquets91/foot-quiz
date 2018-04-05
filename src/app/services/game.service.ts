@@ -12,8 +12,9 @@ export class GameService {
   protected getQuestions(nb: number): Question[] {
     const array = []
     for (let i = 0; i < nb; i++) {
+      const randomIndex = Math.floor(Math.random() * questions.length)
       array.push(
-        questions[Math.floor(Math.random() * questions.length)]
+        questions[randomIndex]
       )
     }
     return array

@@ -19,12 +19,8 @@ export class GameManagerComponent implements OnInit {
     this.isOver = true
   }
 
-  isGameOver() {
+  get isGameOver(): boolean {
     return this.isOver
-  }
-
-  getScore(): number {
-    return this.score
   }
 
   ngOnInit() {

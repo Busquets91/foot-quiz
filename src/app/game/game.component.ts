@@ -15,15 +15,10 @@ export class GameComponent implements OnInit {
   @Output() gameOver: EventEmitter<number> = new EventEmitter()
   constructor() {}
 
-  /** @deprecated */
-  questions(): Question[] {
-    return this.game && this.game.questions
-  }
-
-  currentQuestion(): Question {
+  get currentQuestion(): Question {
+    const validQuestion = this.game && this.game.questions
     return (
-      this.game &&
-      this.game.questions &&
+      validQuestion &&
       this.game.questions[this.indexQuestion]
     )
   }
@@ -34,12 +29,13 @@ export class GameComponent implements OnInit {
 
   next(score: number) {
     this.incrementScore(score)
-    if (this.indexQuestion === this.game.questions.length - 1) {
+    const isOver = this.indexQuestion === this.game.questions.length - 1
+    if (isOver) {
       this.gameOver.emit(this.score)
     } else {
-      this.indexQuestion < this.game.questions.length && this.indexQuestion++
+      const isLastQuestion = this.indexQuestion >= this.game.questions.length
+      !isLastQuestion && this.indexQuestion++
     }
-    console.log("Score :", this.score)
   }
 
   ngOnInit() {}

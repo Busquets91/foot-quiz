@@ -29,15 +29,14 @@ export class QuestionComponent implements OnInit {
     return this._question
   }
 
-  answers(): Answer[] {
+  get answers(): Answer[] {
     return this.question && this.question.answers
   }
 
   setAnswer(answer: Answer) {
-    if (this.answer === null) {
+    const isAnswerValid = this.answer === null
+    if (isAnswerValid) {
       this.answer = answer
-      // When you answer timer stops
-      // this.state = StateQuestion.showing
     }
   }
 
@@ -49,15 +48,15 @@ export class QuestionComponent implements OnInit {
     this.nextQuestion.emit(this.answer && this.answer.isTrue ? 1 : 0)
   }
 
-  isStateAnswering() {
+  get isStateAnswering(): boolean {
     return this.state === StateQuestion.answering
   }
 
-  isStateShowAnswer() {
+  get isStateShowAnswer(): boolean {
     return this.state === StateQuestion.showing
   }
 
-  hasAnswered() {
+  get hasAnswered(): boolean {
     return this.answer !== null
   }
 
