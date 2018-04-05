@@ -22,6 +22,7 @@ import { GameManagerComponent } from "./game-manager/game-manager.component"
 import { CoutdownTimerComponent } from "./coutdown-timer/coutdown-timer.component";
 import { HomeComponent } from './home/home.component';
 import { EndGameComponent } from './end-game/end-game.component'
+import { GameService } from "./services/game.service"
 
 const appRoutes: Routes = [
   { path: "game", component: GameManagerComponent },
@@ -53,7 +54,7 @@ const appRoutes: Routes = [
     MatButtonModule,
     MatCardModule
   ],
-  providers: [],
+  providers: [GameService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

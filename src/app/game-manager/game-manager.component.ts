@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core"
+import { GameService } from "../services/game.service"
 import { Game } from "../models/game"
 
 @Component({
@@ -11,7 +12,7 @@ export class GameManagerComponent implements OnInit {
   isOver: boolean = false
   score: number = 0
 
-  constructor() {}
+  constructor(private gameService: GameService) {}
 
   over(score: number) {
     this.score = score
@@ -64,5 +65,7 @@ export class GameManagerComponent implements OnInit {
         }
       ]
     }
+    // console.log(this.gameService.getGame())
+    // this.game = this.gameService.getGame()
   }
 }
