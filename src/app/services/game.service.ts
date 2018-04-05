@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core"
 import { Game } from "../models/game"
 import { Question } from "../models/question"
+import { GameConfig } from "../models/game-config"
 
 @Injectable()
 export class GameService {
@@ -53,7 +54,7 @@ export class GameService {
     const game = {
       id: 1,
       score: 0,
-      questions: this.getQuestions(1)
+      questions: this.getQuestions(GameConfig.NB_QUESTIONS)
     }
     return game
   }

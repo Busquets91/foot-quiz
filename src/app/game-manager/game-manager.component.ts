@@ -8,7 +8,6 @@ import { Game } from "../models/game"
   styleUrls: ["./game-manager.component.css"]
 })
 export class GameManagerComponent implements OnInit {
-  // static NB_QUESTIONS = 3
   game: Game
   isOver: boolean = false
   score: number = 0
