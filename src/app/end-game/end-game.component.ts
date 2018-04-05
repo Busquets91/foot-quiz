@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from "@angular/core"
+import { Component, OnInit, Input, EventEmitter, Output } from "@angular/core"
 import {DomSanitizer} from '@angular/platform-browser';
 import {MatIconRegistry} from '@angular/material';
 
@@ -10,6 +10,8 @@ import {MatIconRegistry} from '@angular/material';
 export class EndGameComponent implements OnInit {
   @Input() score: number
   @Input() nbQuestions: number
+
+  @Output() restart = new EventEmitter()
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
     iconRegistry.addSvgIcon(
       'replay',
@@ -17,6 +19,10 @@ export class EndGameComponent implements OnInit {
     iconRegistry.addSvgIcon(
       'menu',
       sanitizer.bypassSecurityTrustResourceUrl('assets/icons/menu.svg'));
+  }
+
+  handleRestart() {
+    this.restart.emit()
   }
 
   ngOnInit() {}

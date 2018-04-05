@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter  } from "@angular/core"
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core"
 import { Game } from "../models/game"
 import { Question } from "../models/question"
 
@@ -8,19 +8,30 @@ import { Question } from "../models/question"
   styleUrls: ["./game.component.css"]
 })
 export class GameComponent implements OnInit {
-  @Input() game: Game
   private score: number = 0
+  private _game: Game
   indexQuestion: number = 0
+
+  @Input()
+  set game(game: Game) {
+    const isGameDifferent = game && this._game !== game
+    if (isGameDifferent) {
+      this._game = game
+      this.score = 0
+      this.indexQuestion = 0
+    }
+  }
 
   @Output() gameOver: EventEmitter<number> = new EventEmitter()
   constructor() {}
 
   get currentQuestion(): Question {
     const validQuestion = this.game && this.game.questions
-    return (
-      validQuestion &&
-      this.game.questions[this.indexQuestion]
-    )
+    return validQuestion && this.game.questions[this.indexQuestion]
+  }
+
+  get game(): Game {
+    return this._game
   }
 
   incrementScore(added: number) {

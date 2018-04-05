@@ -19,6 +19,10 @@ export class GameManagerComponent implements OnInit {
     this.isOver = true
   }
 
+  doRestart() {
+    this.initialize()
+  }
+
   get isGameOver(): boolean {
     return this.isOver
   }
@@ -27,7 +31,13 @@ export class GameManagerComponent implements OnInit {
     return this.game.questions.length
   }
 
-  ngOnInit() {
+  initialize() {
     this.game = this.gameService.getGame()
+    this.isOver = false
+    this.score = 0
+  }
+
+  ngOnInit() {
+    this.initialize()
   }
 }
