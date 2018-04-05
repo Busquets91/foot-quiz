@@ -27,8 +27,6 @@ export class UtilService {
       indexArray.push(randomIndex)
       retArray.push(array[randomIndex])
     }
-
-    console.log(retArray)
     return retArray
   }
 }
