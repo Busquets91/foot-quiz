@@ -1,6 +1,20 @@
 <div class="end-game-container">
-	<h1>Fin</h1>
-	<p>Score: {{score}}/{{nbQuestions}}</p>
-	<button mat-raised-button color="primary" (click)="handleRestart()"><mat-icon svgIcon="replay"></mat-icon>Rejouer</button>
-  <a routerLink="/"><button mat-raised-button color="primary"><mat-icon svgIcon="menu"></mat-icon>Menu</button></a>
+  <div class="score">
+    {{getValue()}}%
+  </div>
+  <mat-progress-spinner
+    class="example-margin"
+    color="primary"
+    mode="determinate"
+    [diameter]="250"
+    [strokeWidth]="10"
+    value={{getValue()}}>
+    <div class="score">
+      {{getValue()}}
+    </div>
+  </mat-progress-spinner>
+  <div class="recap">
+    <button mat-raised-button color="primary" (click)="handleRestart()"><mat-icon svgIcon="replay"></mat-icon>Rejouer</button>
+    <a routerLink="/"><button mat-raised-button color="primary"><mat-icon svgIcon="menu"></mat-icon>Menu</button></a>
+  </div>
 </div>
