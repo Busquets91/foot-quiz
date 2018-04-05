@@ -35,7 +35,7 @@ export class CoutdownTimerComponent implements OnInit {
   private countDown() {
     this.clearTimer()
     this.intervalId = window.setInterval(() => {
-      this.seconds -= 1
+      //this.seconds -= 1
       if (this.seconds === 0) {
         this.onTimeDown.emit()
       } else {
