@@ -3,24 +3,24 @@
 }
 
 .selected {
-	background: #9E9E9E;
+	background: #9E9E9E !important;
 	width: 100%;
 }
 
 .selected-good {
-	background: #8BC34A;
+	background: #8BC34A !important;
 }
 
 .selected-wrong {
-	background: #F44336;
+	background: #F44336 !important;
 }
 
 .not-selected-good {
-	background: #C6FF00;
+	background: #C6FF00 !important;
 }
 
 .other {
-	background: #E0E0E0;
+	background: #E0E0E0 !important;
 }
 
 .mat-raised-button{
@@ -29,6 +29,6 @@
   background-color: #fafafa;
   margin: auto;
   display: -webkit-box;
-  font-size: 1.5em;
+  font-size: 1.2em;
   text-transform: uppercase;
 }
