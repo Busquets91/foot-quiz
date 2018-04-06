@@ -108,7 +108,7 @@ const questions = [
     ]
   },
   {
-    question: "Quelle éqiupe a été 5 fios championne du monde (jusqu'en 2006) ?",
+    question: "Quelle éqiupe a été 5 fois championne du monde (jusqu'en 2006) ?",
     answers: [
       { answer: "Brésil", isTrue: true },
       { answer: "Argentine", isTrue: false },
