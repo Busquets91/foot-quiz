@@ -171,15 +171,6 @@ const questions = [
     ]
   },
   {
-    question: "Comment s'appelle l'ancien stade des Girondins de Bordeaux ?",
-    answers: [
-      { answer: "Parc Lescure", isTrue: true },
-      { answer: "Stadium Municipal", isTrue: false },
-      { answer: "Stade Alain Giresse", isTrue: false },
-      { answer: "Stade de l'Abbé Deschamps", isTrue: false }
-    ]
-  },
-  {
     question: "Combien Youri Djorkaeff a-t-il marqué de but en équipe de France ?",
     answers: [
       { answer: "28", isTrue: true },
